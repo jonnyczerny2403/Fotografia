@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR" data-type="service">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ondra Fotografia — retratos, casamentos, eventos e viagens</title>
+<meta name="description" content="Fotógrafo para retratos, casamentos, eventos, viagens e produtos. Ensaios a partir de R$ 690, com fotos editadas em até 10 dias.">
+<meta name="page-type" content="service">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23d9a35b' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23d9a35b'/%3E%3C/svg%3E">
+</head>
+<body>
+<!--
+  Ondra Fotografia — nome provisório.
+  Direção: "a lente" — o visitante atravessa um túnel 3D de fotografias (WebGL) e cada seção
+  revela o trabalho por abertura de diafragma (clip-path), galeria horizontal guiada pelo scroll
+  e foto que se expande até a tela cheia. Paleta: carvão quente, papel, âmbar. Tipos: Instrument Serif + Manrope.
+  Fotos: exemplos (Unsplash via picsum.photos) — trocar pelas fotos do cliente.
+-->
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__ring"><span></span></div>
+  <div class="loader__count">0</div>
+</div>
+
+<header class="nav" id="top">
+  <div class="wrap nav__row">
+    <a class="logo" href="#top" aria-label="Ondra Fotografia, início">
+      <span class="logo__mark" aria-hidden="true"></span>Ondra
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#portfolio">Portfólio</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn btn--primary nav__cta" href="#contato" data-magnet>Agendar ensaio</a>
+    <button class="nav__menu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" aria-hidden="true">
+  <a href="#portfolio">Portfólio</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#processo">Processo</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Agendar ensaio</a>
+</div>
+
+<main id="conteudo">
+
+  <!-- 1. Experiência-chave: túnel 3D de fotografias guiado pelo scroll -->
+  <section class="hero" aria-label="Apresentação">
+    <div class="hero__pin">
+      <canvas class="hero__gl" aria-hidden="true"></canvas>
+      <img class="hero__fallback" src="assets/img/p64.webp" alt="" aria-hidden="true">
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <div class="wrap hero__content">
+        <p class="hero__eyebrow"><span class="dot"></span>Fotógrafo de retratos, casamentos e eventos</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Fotografia que</span></span>
+          <span class="line"><span><em>guarda</em> o que</span></span>
+          <span class="line"><span>importa.</span></span>
+        </h1>
+        <p class="hero__lead">Ensaios, casamentos, eventos e viagens com direção leve e luz natural. Fotos editadas em até 10 dias, a partir de R$&nbsp;690.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contato" data-magnet>Agendar ensaio <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="#portfolio" data-magnet>Ver portfólio</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span>Role para entrar</span><i></i></div>
+      <div class="hero__counter" aria-hidden="true"><span class="hero__num">01</span> / 12</div>
+    </div>
+  </section>
+
+  <!-- 2. Manifesto: palavras acendem com o scroll -->
+  <section class="manifesto" aria-label="Como eu fotografo">
+    <div class="wrap">
+      <p class="manifesto__label">Como eu fotografo</p>
+      <p class="manifesto__text" data-words>Eu observo antes de clicar. Procuro a luz certa, o gesto que ninguém ensaiou e o instante que passa rápido demais. Você vive o seu dia; eu cuido para que ele continue existindo em cada foto.</p>
+      <div class="manifesto__stats">
+        <div><strong data-count="10">0</strong><span>dias para receber as fotos editadas</span></div>
+        <div><strong data-count="6">0</strong><span>tipos de ensaio e cobertura</span></div>
+        <div><strong data-count="100" data-suffix="%">0</strong><span>das fotos entregues em alta resolução</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Portfólio: galeria horizontal guiada pelo scroll -->
+  <section class="portfolio" id="portfolio" aria-label="Portfólio">
+    <div class="portfolio__pin">
+      <div class="wrap portfolio__head">
+        <h2 class="h2">Portfólio <em>por tema</em></h2>
+        <p class="portfolio__hint">Clique em uma foto para ampliar</p>
+      </div>
+      <div class="track" data-track>
+        <article class="slide" data-cat="Retratos">
+          <figure class="frame" data-zoom data-full="assets/img/p65.webp"><img src="assets/img/p65-sm.webp" alt="Retrato de mulher ao pôr do sol, cabelo iluminado por trás" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">01</span><h3>Retratos</h3></div>
+        </article>
+        <article class="slide slide--tall" data-cat="Casais">
+          <figure class="frame" data-zoom data-full="assets/img/p129.webp"><img src="assets/img/p129-sm.webp" alt="Casal sentado em um banco olhando o mar" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">02</span><h3>Casais e casamentos</h3></div>
+        </article>
+        <article class="slide" data-cat="Eventos">
+          <figure class="frame" data-zoom data-full="assets/img/p158.webp"><img src="assets/img/p158-sm.webp" alt="Show com feixes de luz sobre o público" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">03</span><h3>Eventos e shows</h3></div>
+        </article>
+        <article class="slide slide--tall" data-cat="Viagem">
+          <figure class="frame" data-zoom data-full="assets/img/p231.webp"><img src="assets/img/p231-sm.webp" alt="Cordilheira com picos e vale verde" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">04</span><h3>Paisagens e viagens</h3></div>
+        </article>
+        <article class="slide" data-cat="Urbano">
+          <figure class="frame" data-zoom data-full="assets/img/p249.webp"><img src="assets/img/p249-sm.webp" alt="Ponte iluminada sobre o rio à noite" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">05</span><h3>Cidade e arquitetura</h3></div>
+        </article>
+        <article class="slide slide--tall" data-cat="Produtos">
+          <figure class="frame" data-zoom data-full="assets/img/p292.webp"><img src="assets/img/p292-sm.webp" alt="Legumes e especiarias sobre tábua de madeira" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">06</span><h3>Gastronomia e produtos</h3></div>
+        </article>
+        <article class="slide" data-cat="Retratos">
+          <figure class="frame" data-zoom data-full="assets/img/p64.webp"><img src="assets/img/p64-sm.webp" alt="Mulher de óculos escuros segurando flores no campo" loading="lazy"></figure>
+          <div class="slide__meta"><span class="num">07</span><h3>Ensaios ao ar livre</h3></div>
+        </article>
+        <article class="slide slide--end">
+          <a class="slide__cta" href="#contato" data-magnet>
+            <span>Quer fotos assim?</span>
+            <strong>Agendar ensaio</strong>
+            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+      </div>
+      <div class="wrap portfolio__bar" aria-hidden="true"><i data-progress></i></div>
+    </div>
+  </section>
+
+  <!-- 4. Foto que se abre até a tela cheia -->
+  <section class="expand" aria-label="Foto em destaque">
+    <div class="expand__pin">
+      <div class="expand__frame"><img src="assets/img/p110.webp" alt="Campo com árvores sob o pôr do sol dourado" loading="lazy"></div>
+      <div class="wrap expand__words">
+        <p class="expand__kicker">A hora dourada</p>
+        <h2 class="expand__title">A luz decide.<br><em>Eu espero por ela.</em></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Serviços: lista com foto que segue o cursor -->
+  <section class="services" id="servicos" aria-label="Serviços e preços">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2">Serviços e <em>preços</em></h2>
+        <p class="sec-lead">Todos os pacotes incluem direção durante as fotos, edição de cor e galeria online para baixar e compartilhar.</p>
+      </div>
+      <ul class="svc" data-svc>
+        <li class="svc__row" data-img="assets/img/p65-sm.webp">
+          <span class="svc__num">01</span><h3>Ensaio de retrato</h3><p>1 hora, 1 local, 40 fotos editadas</p><span class="svc__price">a partir de R$&nbsp;690</span>
+        </li>
+        <li class="svc__row" data-img="assets/img/p129-sm.webp">
+          <span class="svc__num">02</span><h3>Ensaio de casal ou gestante</h3><p>2 horas, até 2 locais, 70 fotos editadas</p><span class="svc__price">a partir de R$&nbsp;1.190</span>
+        </li>
+        <li class="svc__row" data-img="assets/img/p325-sm.webp">
+          <span class="svc__num">03</span><h3>Casamento</h3><p>Da preparação à festa, até 10 horas, todas as boas fotos</p><span class="svc__price">a partir de R$&nbsp;5.900</span>
+        </li>
+        <li class="svc__row" data-img="assets/img/p158-sm.webp">
+          <span class="svc__num">04</span><h3>Eventos e festas</h3><p>Aniversários, corporativos e shows, por hora</p><span class="svc__price">a partir de R$&nbsp;480/h</span>
+        </li>
+        <li class="svc__row" data-img="assets/img/p292-sm.webp">
+          <span class="svc__num">05</span><h3>Produtos e gastronomia</h3><p>Fotos para cardápio, loja virtual e redes sociais</p><span class="svc__price">a partir de R$&nbsp;890</span>
+        </li>
+        <li class="svc__row" data-img="assets/img/p231-sm.webp">
+          <span class="svc__num">06</span><h3>Viagem e paisagem</h3><p>Acompanho sua viagem ou vendo fotos para decoração</p><span class="svc__price">sob consulta</span>
+        </li>
+      </ul>
+    </div>
+    <div class="svc__float" aria-hidden="true"><img alt=""></div>
+  </section>
+
+  <!-- 6. Mosaico em camadas (paralaxe 3D por profundidade) -->
+  <section class="mosaic" aria-label="Mais trabalhos">
+    <div class="wrap">
+      <h2 class="h2 mosaic__title">Cada foto, <em>uma história</em></h2>
+    </div>
+    <div class="mosaic__stage">
+      <figure class="m m1" data-depth="0.9" data-zoom data-full="assets/img/p43.webp"><img src="assets/img/p43-sm.webp" alt="Ponte do Brooklyn em preto e branco à noite" loading="lazy"></figure>
+      <figure class="m m2" data-depth="0.4" data-zoom data-full="assets/img/p179.webp"><img src="assets/img/p179-sm.webp" alt="Ondas batendo em rochas no litoral" loading="lazy"></figure>
+      <figure class="m m3" data-depth="1.3" data-zoom data-full="assets/img/p325.webp"><img src="assets/img/p325-sm.webp" alt="Mulher de vestido branco descalça na floresta" loading="lazy"></figure>
+      <figure class="m m4" data-depth="0.6" data-zoom data-full="assets/img/p195.webp"><img src="assets/img/p195-sm.webp" alt="Rua com varal de luzes à noite" loading="lazy"></figure>
+      <figure class="m m5" data-depth="1.1" data-zoom data-full="assets/img/p348.webp"><img src="assets/img/p348-sm.webp" alt="Pessoas em movimento numa estação" loading="lazy"></figure>
+      <figure class="m m6" data-depth="0.5" data-zoom data-full="assets/img/p77.webp"><img src="assets/img/p77-sm.webp" alt="Píer de madeira sobre o mar calmo" loading="lazy"></figure>
+      <figure class="m m7" data-depth="1.5" data-zoom data-full="assets/img/p365.webp"><img src="assets/img/p365-sm.webp" alt="Xícara de chá com flor sobre lençol" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- 7. Processo -->
+  <section class="process" id="processo" aria-label="Como funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2">Como funciona, <em>em 4 passos</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="step__n">01</span><h3>Conversa</h3><p>Você me conta a ideia pelo WhatsApp ou formulário. Respondo em até 1 dia útil.</p></li>
+        <li class="step"><span class="step__n">02</span><h3>Planejamento</h3><p>Escolhemos local, horário de melhor luz, roupas e referências.</p></li>
+        <li class="step"><span class="step__n">03</span><h3>Dia das fotos</h3><p>Direção leve e tranquila. Você não precisa saber posar.</p></li>
+        <li class="step"><span class="step__n">04</span><h3>Entrega</h3><p>Galeria online com as fotos editadas em até 10 dias.</p></li>
+      </ol>
+      <div class="process__line" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 8. Sobre -->
+  <section class="about" id="sobre" aria-label="Sobre o fotógrafo">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <h2 class="h2">Sobre <em>o fotógrafo</em></h2>
+        <p>Comecei com uma câmera de filme e nunca mais parei. Hoje fotografo pessoas, celebrações, lugares e marcas, sempre com o mesmo cuidado: luz bonita, cor fiel e momentos verdadeiros.</p>
+        <p>Atendo em estúdio, ao ar livre e no local do seu evento. Viajo para outras cidades sob consulta.</p>
+        <a class="link" href="#contato">Conversar sobre o seu ensaio</a>
+      </div>
+      <div class="about__pics">
+        <figure class="about__a" data-reveal><img src="assets/img/p91-sm.webp" alt="Fotógrafo segurando uma câmera de médio formato" loading="lazy"></figure>
+        <figure class="about__b" data-reveal><img src="assets/img/p319-sm.webp" alt="Mãos ajustando uma câmera" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Contato -->
+  <section class="contact" id="contato" aria-label="Agendar ensaio">
+    <div class="contact__bg" aria-hidden="true"><img src="assets/img/p122-sm.webp" alt=""></div>
+    <div class="wrap contact__grid">
+      <div>
+        <h2 class="contact__title">Vamos marcar<br><em>o seu ensaio?</em></h2>
+        <p class="sec-lead">Envie a data e o tipo de foto. Respondo com valores e horários disponíveis em até 1 dia útil.</p>
+        <a class="btn btn--wa" href="#contato" data-wa-link data-magnet>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <form class="form" action="mailto:contato@ondra.example" method="post" enctype="text/plain">
+        <label>Seu nome<input name="nome" required autocomplete="name"></label>
+        <label>E-mail ou telefone<input name="contato" required></label>
+        <div class="form__row">
+          <label>Tipo de foto
+            <select name="tipo">
+              <option>Retrato</option><option>Casal ou gestante</option><option>Casamento</option>
+              <option>Evento</option><option>Produtos</option><option>Viagem</option>
+            </select>
+          </label>
+          <label>Data desejada<input name="data" type="date"></label>
+        </div>
+        <label>Conte um pouco da ideia<textarea name="mensagem" rows="3"></textarea></label>
+        <button class="btn btn--primary" type="submit" data-magnet>Agendar ensaio <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__word" aria-hidden="true">Ondra</p>
+    <div class="footer__row">
+      <span>© <span data-year>2026</span> Ondra Fotografia</span>
+      <nav aria-label="Rodapé"><a href="#portfolio">Portfólio</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></nav>
+      <span class="footer__credit">Fotos de exemplo via Unsplash (picsum.photos)</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp (configurado em config/site.json) -->
+<a class="wa-float" href="#contato" data-wa-link data-wa-float aria-label="Conversar pelo WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button class="lightbox__close" aria-label="Fechar">×</button>
+  <img alt="">
+</div>
+
+<div class="cursor" aria-hidden="true"><span>Ver</span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/tunnel.js"></script>
+</body>
+</html>
