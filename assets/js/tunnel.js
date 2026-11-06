@@ -36,8 +36,8 @@ function start() {
       vUv = uv;
       vec3 p = position;
       // dobra a foto conforme a velocidade do scroll
-      p.z += sin(uv.x * 3.14159) * uVel * 0.9;
-      p.y += sin(uv.x * 3.14159 + uTime) * 0.03;
+      p.z += sin(uv.x * 3.14159) * uVel * 0.2;
+      
       vec4 mv = modelViewMatrix * vec4(p, 1.0);
       vDepth = -mv.z;
       gl_Position = projectionMatrix * mv;
@@ -52,7 +52,7 @@ function start() {
     }
     void main(){
       vec2 uv = cover(vUv);
-      float shift = uVel * 0.012 + 0.002;
+      float shift = uVel * 0.002;
       vec3 c;
       c.r = texture2D(uTex, uv + vec2(shift, 0.0)).r;
       c.g = texture2D(uTex, uv).g;
@@ -113,7 +113,7 @@ function start() {
     pos[i * 3 + 2] = -Math.random() * PHOTOS.length * SPACING;
   }
   dustGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xf0c07e, size: 0.035, transparent: true, opacity: .75, depthWrite: false }));
+  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xf0c07e, size: 0.035, transparent: true, opacity: .4, depthWrite: false }));
   scene.add(dust);
 
   const counter = document.querySelector('.hero__num');
@@ -146,7 +146,7 @@ function start() {
     const t = (now - t0) / 1000;
     const p = reduce ? 0 : progress();
     // um leve avanço automático no início para o túnel nunca parecer parado
-    const targetZ = 6 + (endZ - 6) * p - Math.sin(t * .4) * .25;
+    const targetZ = 6 + (endZ - 6) * p ;
     const prev = camZ;
     camZ += (targetZ - camZ) * 0.08;
     vel += ((prev - camZ) * 2.2 - vel) * 0.12;
@@ -154,15 +154,15 @@ function start() {
     uniformsShared.uTime.value = t;
 
     mouse.x += (mouse.tx - mouse.x) * .05; mouse.y += (mouse.ty - mouse.y) * .05;
-    camera.position.set(mouse.x * .9, -mouse.y * .6, camZ);
-    camera.rotation.set(-mouse.y * .08, -mouse.x * .12, Math.sin(p * Math.PI * 2) * 0.05);
+    camera.position.set(mouse.x * .3, -mouse.y * .2, camZ);
+    camera.rotation.set(0, 0, 0);
 
     meshes.forEach((m, i) => {
       const u = m.userData;
-      m.position.x = u.baseX + Math.sin(t * .5 + u.phase) * .08;
-      m.position.y = u.baseY + Math.cos(t * .4 + u.phase) * .08;
+      m.position.x = u.baseX + Math.sin(t * .3 + u.phase) * .02;
+      m.position.y = u.baseY + Math.cos(t * .25 + u.phase) * .02;
     });
-    dust.rotation.z = t * .02;
+    
 
     const idx = Math.min(PHOTOS.length, Math.max(1, Math.round((6 - camZ + 2) / SPACING)));
     if (counter) counter.textContent = String(idx).padStart(2, '0');
