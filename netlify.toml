@@ -1,5 +1,6 @@
 [build]
-  publish = "."
+  command = "rm -rf dist && mkdir dist && cp -r index.html assets config dist/"
+  publish = "dist"
 [[headers]]
   for = "/assets/*"
   [headers.values]
