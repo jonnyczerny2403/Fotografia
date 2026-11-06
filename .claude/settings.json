@@ -1,0 +1,61 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "NotebookEdit",
+      "mcp__Netlify",
+      "mcp__Stripe",
+      "mcp__github",
+      "mcp__claude-code-remote",
+      "mcp__netlify__*",
+      "mcp__stripe__*",
+      "mcp__github__*",
+      "mcp__claude-code-remote__*"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-start.sh",
+            "timeout": 120,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/visual-gate.mjs\" start",
+            "timeout": 10,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/visual-gate.mjs\" stop",
+            "timeout": 20,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ]
+  }
+}
